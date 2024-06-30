@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+div#FundoInicio {
+    position: relative;
+    background-image: url(imagens/fundo_azul.jpg);
+    width: 100%;
+    height: 700px;
+    background-attachment: fixed; /* Faz com que o background fique fixo no tela. */
+    background-size: cover;
+    margin-bottom: 50px;
+}
+
+div#FundoInicio p {
+    font-family: "Merriweather", serif;
+    font-weight: bolder;
+}
+
+div#FundoInicio img {
+    width: 600px;
+    height: auto;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.678));
+}
+
+div#FundoInicio::after { /* Criando conteudo com o objetivo de criar uma sombra que sobreponha o fundo e a imagem */
+    content: "";
+    position: absolute;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: inset 0px -20px 11px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+div#FundoInicio div#TextoInicio {
+    font-size: 5em;
+    color: white;
+    font-weight: bold;
+    position: relative; /* Permite o uso de top e transform para posicionar o elemento. */
+    top: 50%; /* Move o elemento para baixo 50% da altura do elemento pai. (div#FundoInicio) */
+    transform: translateY(-50%); /* Move o elemento para cima 50% da sua própria altura, efetivamente centralizando-o verticalmente no elemento pai. */
+    margin-left: 150px;
+    display: inline-block; /* Faz o pseudo-elemento se comportar como um bloco em linha. */
+    filter: drop-shadow(0 4px 8px black); /* Sombra segue a silueta do texto */
+    padding: 5px 10px 5px 10px;
+    z-index: 2;
+}
+
+div#TextoInicio::after {
+    content: ""; /* Adiciona um conteúdo vazio no pseudo-elemento. */
+    display: inline-block; /* Faz o pseudo-elemento se comportar como um bloco em linha. */
+    height: 100%; /* Define a altura do pseudo-elemento igual à altura do elemento pai. */
+    width: 0;
+    background-color: rgb(5, 107, 73);
+    position: absolute; /* Posiciona o elemento em relação o elemento pai (div#TextoInicio) */
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: width 0.3s;
+}
+
+div#TextoInicio:hover::after {
+    width: 100%; /* Define a largura do pseudo-elemento igual à largura do elemento pai. */
+}
+
+section#Paragrafo01 {
+    margin: 50px;
+    font-size: 2em;
+    font-family: "Barlow", sans-serif;
+    margin-bottom: 100px;
+}
+
+section#Paragrafo01 p {
+    text-align: justify;
+    text-indent: 50px;
+    margin-bottom: 20px;
+}
+
+img#VictorAdolescente{
+    float: left;
+    margin-top: 30px;
+    margin-left: 200px;
+    width: 400px;
+    height: auto;
+    border-radius: 50px;
+    filter: grayscale(90%); /* Deixando a imagem em preto e branco */
+    transition: filter 1s ease; /* Define a transição, gradual e suave (ease)*/
+}
+
+img#VictorAdolescente:hover{
+    filter: grayscale(0%);  /* Retirando o filtro preto e branco */
+}
+
+section#Paragrafo02{
+    font-size: 2em;
+    font-family: "Barlow", sans-serif;
+    text-align: justify;
+    margin-right: 50px;
+    float: right;
+    width: 50%;
+}
+
+section#Paragrafo02 h2{
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: bolder;
+    font-size: 3em;
+    background: linear-gradient(to right, #056b49, blue); /* Definição do gradiente */
+    background-clip: text; /* Usa a forma do texto pra realizar o corte do fundo */
+    color: transparent;
+}
+section#Paragrafo02 p{
+    text-indent: 50px;
+}
+
+section#Paragrafo02 strong#TrechoFedegoso{
+    font-weight: normal;
+    position: relative;
+    transition: color 1s;
+}
+section#Paragrafo02 strong#TrechoFedegoso:hover{
+    color: white;
+}
+section#Paragrafo02 strong#TrechoFedegoso::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background-color: rgba(29, 29, 209, 0.904);
+    transition: width 0.5s ease;
+    z-index: -1;
+}
+section#Paragrafo02 strong#TrechoFedegoso:hover::after{
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: rgba(5, 107, 73, 0.733);
+    font-size: 0.7em;
+    position: relative;
+    transition: font-size 0.1s;
+}
+
+a:hover {
+    font-size: 0.75em;
+}
+
+a::after {
+    content: " ";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: rgba(5, 107, 73, 0.733);
+    transition: width 0.4s;
+}
+
+a:hover::after {
+    width: 100%;
+}
