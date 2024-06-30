@@ -39,13 +39,13 @@ div#FundoInicio::after { /* Criando conteudo com o objetivo de criar uma sombra 
 }
 
 div#FundoInicio div#TextoInicio {
-    font-size: 5em;
+    font-size: 4em;
     color: white;
     font-weight: bold;
     position: relative; /* Permite o uso de top e transform para posicionar o elemento. */
-    top: 50%; /* Move o elemento para baixo 50% da altura do elemento pai. (div#FundoInicio) */
+    top: 40%; /* Move o elemento para baixo 50% da altura do elemento pai. (div#FundoInicio) */
     transform: translateY(-50%); /* Move o elemento para cima 50% da sua própria altura, efetivamente centralizando-o verticalmente no elemento pai. */
-    margin-left: 150px;
+    margin-left: 100px;
     display: inline-block; /* Faz o pseudo-elemento se comportar como um bloco em linha. */
     filter: drop-shadow(0 4px 8px black); /* Sombra segue a silueta do texto */
     padding: 5px 10px 5px 10px;
@@ -84,8 +84,8 @@ section#Paragrafo01 p {
 
 img#VictorAdolescente{
     float: left;
-    margin-top: 30px;
-    margin-left: 200px;
+    margin-top: 100px;
+    margin-left: 100px;
     width: 400px;
     height: auto;
     border-radius: 50px;
@@ -121,24 +121,13 @@ section#Paragrafo02 p{
 section#Paragrafo02 strong#TrechoFedegoso{
     font-weight: normal;
     position: relative;
-    transition: color 1s;
+    transition: background-color 0.5s ease, color 1s ease;;
+    border-radius: 2px;
+    padding: 0 2px 0 2px;
 }
 section#Paragrafo02 strong#TrechoFedegoso:hover{
     color: white;
-}
-section#Paragrafo02 strong#TrechoFedegoso::after{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 0;
     background-color: rgba(29, 29, 209, 0.904);
-    transition: width 0.5s ease;
-    z-index: -1;
-}
-section#Paragrafo02 strong#TrechoFedegoso:hover::after{
-    width: 100%;
 }
 
 a {
