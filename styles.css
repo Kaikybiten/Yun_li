@@ -69,17 +69,18 @@ div#TextoInicio:hover::after {
     width: 100%; /* Define a largura do pseudo-elemento igual à largura do elemento pai. */
 }
 
-section#Paragrafo01 {
+section{
     margin: 50px;
+}
+
+section#Paragrafo01 {
     font-size: 2em;
     font-family: "Barlow", sans-serif;
-    margin-bottom: 100px;
 }
 
 section#Paragrafo01 p {
     text-align: justify;
     text-indent: 50px;
-    margin-bottom: 20px;
 }
 
 img#VictorAdolescente{
@@ -89,7 +90,7 @@ img#VictorAdolescente{
     width: 400px;
     height: auto;
     border-radius: 50px;
-    filter: grayscale(90%); /* Deixando a imagem em preto e branco */
+    filter: grayscale(100%); /* Deixando a imagem em preto e branco */
     transition: filter 1s ease; /* Define a transição, gradual e suave (ease)*/
 }
 
@@ -114,6 +115,7 @@ section#Paragrafo02 h2{
     background-clip: text; /* Usa a forma do texto pra realizar o corte do fundo */
     color: transparent;
 }
+
 section#Paragrafo02 p{
     text-indent: 50px;
 }
@@ -125,24 +127,28 @@ section#Paragrafo02 strong#TrechoFedegoso{
     border-radius: 2px;
     padding: 0 2px 0 2px;
 }
+
 section#Paragrafo02 strong#TrechoFedegoso:hover{
     color: white;
     background-color: rgba(29, 29, 209, 0.904);
 }
 
-a {
+a{
     text-decoration: none;
+}
+
+a.Bibliografia {
     color: rgba(5, 107, 73, 0.733);
     font-size: 0.7em;
     position: relative;
     transition: font-size 0.1s;
 }
 
-a:hover {
+a.Bibliografia:hover {
     font-size: 0.75em;
 }
 
-a::after {
+a.Bibliografia::after {
     content: " ";
     position: absolute;
     bottom: -5px;
@@ -153,6 +159,80 @@ a::after {
     transition: width 0.4s;
 }
 
-a:hover::after {
+a.Bibliografia:hover::after {
     width: 100%;
+}
+
+div.albuns_capas{
+    display: inline-block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+img.albuns{
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.473);
+    width: 250px;
+    height: 250px;
+    margin: 50px;
+    filter: grayscale(60%);
+    transition: width 0.5s ease, height 0.5s ease, filter 0.5s;
+}
+img.albuns:hover{
+    filter: grayscale(0%);
+    width: 300px;
+    height: 300px;
+}
+
+section#Paragrafo03{
+    font-size: 2em;
+    font-family: "Barlow", sans-serif;
+    text-align: justify;
+    width: 50%;
+    float: left;
+}
+
+div#VictorCamera{
+    float: right;
+    width: 30%;
+    position: relative;
+    margin: 100px 100px 0 0 ;
+}
+
+section#Paragrafo03 h2{
+    font-size: 2.37em;
+    color: #87CEEB;
+}
+
+section#Paragrafo03 h2 span{
+    font-weight: bolder;
+    color: transparent;
+    background-image: linear-gradient(to right, #ffd700, #ffaf30);
+    background-clip: text;
+}
+
+img#VictorDesenho{
+    filter: drop-shadow(5px 2px 2px black);
+    width: 100%;
+    position: absolute;
+    transform-origin: 50% 50%; /* Definindo o centro da imagem como seu ponto de origem/eixo */
+    transition: 0.2s ease;
+}
+
+img#VictorDesenho:hover{
+    transform: rotate(-5deg); /* Mudando a angulação da imagem em -5 graus */
+}
+
+img#Camera{
+    filter: drop-shadow(2px 2px 5px black);
+    width: 150px;
+    position: absolute;
+    top: 210px;
+    left: 25px;
+    transform-origin: 50% 50%; /* Definindo o centro da imagem como seu ponto de origem/eixo */
+    transition: transform 0.3s ease;
+}
+
+img#Camera:hover{
+    transform: rotate(10deg); /* Mudando a angulação da imagem em 10 graus */
 }
