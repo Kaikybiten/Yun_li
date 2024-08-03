@@ -192,6 +192,10 @@ section#Paragrafo03{
     float: left;
 }
 
+section#Paragrafo03 p{
+    text-indent: 50px;
+}
+
 div#VictorCamera{
     float: right;
     width: 30%;
@@ -219,10 +223,6 @@ img#VictorDesenho{
     transition: 0.2s ease;
 }
 
-img#VictorDesenho:hover{
-    transform: rotate(-5deg); /* Mudando a angulação da imagem em -5 graus */
-}
-
 img#Camera{
     filter: drop-shadow(2px 2px 5px black);
     width: 150px;
@@ -233,6 +233,33 @@ img#Camera{
     transition: transform 0.3s ease;
 }
 
-img#Camera:hover{
-    transform: rotate(10deg); /* Mudando a angulação da imagem em 10 graus */
+img#BiffeVictor{
+    width: 400px;
+    height: auto;
+    border-radius: 50px;
+    margin: 80px 0 0 100px;
+    filter: grayscale(100%);
+    transition: filter 1s ease;
 }
+img#BiffeVictor:hover{
+    filter: grayscale(0%);
+}
+
+section#Paragrafo04{
+    font-size: 2em;
+    font-family: "Barlow", sans-serif;
+    text-align: justify;
+    width: 50%;
+    float: right;
+}
+
+section#Paragrafo04 p{
+    text-indent: 50px;
+}
+
+section#Paragrafo04 h2{
+    font-family: "Josefin Slab", serif;
+    text-decoration: underline;
+}
+
+
